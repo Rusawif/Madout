@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MADOUT 2</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      background: linear-gradient(to right, #0f0f0f, #1c1c1c);
+      color: white;
+      font-family: "Segoe UI", sans-serif;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      margin-bottom: 30px;
+      animation: fadeInDown 1s ease forwards;
+    }
+
+    .news-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .news-card {
+      background: #202020;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+      opacity: 0;
+      animation: fadeInUp 0.6s ease forwards;
+    }
+
+    .news-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    }
+
+    .news-card h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+      color: #00aaff;
+    }
+
+    .news-card p {
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 30px;
+      text-align: center;
+      color: #00aaff;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Последние новости</h1>
+
+  <div class="news-container">
+    <div class="news-card">
+      <h2>🚀 Мы открылись</h2>
+      <p>ДОБРО ПОЖАЛОВАТЬ</p>
+    </div>
+    <div class="news-card">
+      <h2>🎙️ОБЗВОН
+      </p> Набор, Артем, Валера, Амон.
+    </div>
+    <div class="news-card">
+      <h2>🎬 ПРОКАЧКА </h2>
+      <p> +8 +9 +10 И Т.Д</p>
+    </div>
+  </div>
+
+  <a href="index.html" class="back-link">← На главную</a>
+</body>
+</html>
